@@ -12,11 +12,11 @@
   align-items: center;
 
   @extend %colorAnimation;
-}
 
-.contacts-list__link:hover,
-.contacts-list__link:focus {
-  @extend %accentColor;
+  &:hover,
+  &:focus {
+    @extend %accentColor;
+  }
 }
 
 .contacts-list__icon {

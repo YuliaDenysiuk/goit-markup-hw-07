@@ -5,9 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Студия</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
@@ -15,10 +12,10 @@
         <div class="container page-header__container">
             <nav class="site-nav">
                 <a href="./" class="logo page-header__logo" lang="en">Web<span class="logo__part logo__part--light-bg">Studio</span></a>
-                <ul class="list nav-list">
-                    <li class="nav-list__item"><a href="./index.html" class="link nav-list__link nav-list__link--current">Студия</a></li>
-                    <li class="nav-list__item"><a href="./portfolio.html" class="link nav-list__link">Портфолио</a></li>
-                    <li class="nav-list__item"><a href="" class="link nav-list__link">Контакты</a></li>
+                <ul class="list site-nav__list">
+                    <li class="site-nav__item"><a href="./index.html" class="link site-nav__link site-nav__link--current">Студия</a></li>
+                    <li class="site-nav__item"><a href="./portfolio.html" class="link site-nav__link">Портфолио</a></li>
+                    <li class="site-nav__item"><a href="" class="link site-nav__link">Контакты</a></li>
                 </ul>
             </nav>
     
@@ -335,9 +332,9 @@
                     <a href="./" class="logo page-footer__logo" lang="en">Web<span class="logo__part logo__part--dark-bg">Studio</span></a>
                     <address class="address">
                         г. Киев, пр-т Леси Украинки, 26
-                        <ul class="list contacts">
-                            <li class="contacts__item">info@example.com</li>
-                            <li class="contacts__item">+38 096 111 11 11</li>
+                        <ul class="list">
+                            <li class="address__item">info@example.com</li>
+                            <li class="address__item">+38 096 111 11 11</li>
                         </ul>                    
                     </address>
                 </div>
@@ -389,61 +386,57 @@
         </div>
     </footer>
     <div class="backdrop is-hidden" data-modal>
-        <form class="modal-form">
-            <strong class="title modal-form__title">Оставьте свои данные, мы вам перезвоним</strong>
-            <ul class="list form-field-list">
-                <li class="form-field">
-                    <label class="form-field__label" for="user-name">Имя</label>
-                    <div class="form-field__input-thumb">
-                        <input class="form-field__input" type="text" name="user-name" id="user-name" placeholder=" "
+        <div class="modal">
+            <strong class="title modal__title">Оставьте свои данные, мы вам перезвоним</strong>
+            <form class="modal-form">            
+                <div class="modal-form__field">
+                    <label class="modal-form__label" for="user-name">Имя</label>
+                    <div class="modal-form__input-thumb">
+                        <input class="modal-form__input" type="text" name="user-name" id="user-name" placeholder=" "
                             pattern="^[a-zA-ZА-Яа-яЁё\s]+$" required>
-                        <svg class="form-field__icon" width="18" height="18">
+                        <svg class="modal-form__icon" width="18" height="18">
                             <use href="./images/studio/icons.svg#icon-person-form"></use>
                         </svg>
                     </div>
-                </li>
-                <li class="form-field">
-                    <label class="form-field__label" for="user-phone">Телефон</label>
-                    <div class="form-field__input-thumb">
-                        <input class="form-field__input" type="tel" name="user-phone" id="user-phone" placeholder=" " pattern="^[ 0-9]+$" required>
-                        <svg class="form-field__icon" width="18" height="18">
+                </div>
+                <div class="modal-form__field">
+                    <label class="modal-form__label" for="user-phone">Телефон</label>
+                    <div class="modal-form__input-thumb">
+                        <input class="modal-form__input" type="tel" name="user-phone" id="user-phone" placeholder=" " pattern="^[ 0-9]+$" required>
+                        <svg class="modal-form__icon" width="18" height="18">
                             <use href="./images/studio/icons.svg#icon-phone-form"></use>
                         </svg>
                     </div>
-                </li>
-                <li class="form-field">
-                    <label class="form-field__label" for="user-email">Почта</label>
-                    <div class="form-field__input-thumb">
-                        <input class="form-field__input" type="email" name="user-email" id="user-email" placeholder=" " required>
-                        <svg class="form-field__icon" width="18" height="18">
+                </div>
+                <div class="modal-form__field">
+                    <label class="modal-form__label" for="user-email">Почта</label>
+                    <div class="modal-form__input-thumb">
+                        <input class="modal-form__input" type="email" name="user-email" id="user-email" placeholder=" " required>
+                        <svg class="modal-form__icon" width="18" height="18">
                             <use href="./images/studio/icons.svg#icon-email-form"></use>
                         </svg>
                     </div>
-                </li>
-                <li class="form-field textarea">
-                    <label class="form-field__label" for="comment">Комментарий</label>
-                    <textarea class="form-field__input textarea__input" name="comment" id="comment" cols="30" rows="6" placeholder="Введите текст"></textarea>
-                </li>
-            </ul>
-            <div class="checkbox">
-                <label class="checkbox__label" for="confirm">
+                </div>
+                <div class="modal-form__field modal-form__textarea">
+                    <label class="modal-form__label" for="comment">Комментарий</label>
+                    <textarea class="modal-form__input modal-form__textarea-input" name="comment" id="comment" cols="30" rows="6" placeholder="Введите текст"></textarea>
+                </div>
+                <label class="checkbox" for="confirm">
                     <input class="checkbox__input" type="checkbox" name="confirm" id="confirm" required>
                     <svg class="checkbox__icon" width="16" height="15">
                         <use href="./images/studio/icons.svg#icon-check"></use>
                     </svg>
-                    <span class="checkbox__text">Cоглашаюсь с рассылкой и принимаю</span>
+                    <span class="checkbox__label">Cоглашаюсь с рассылкой и принимаю</span>
                     <a href="" class="link checkbox__link">Условия договора</a>
-                </label>                
-            </div>
-            <div class="submit-button">
-                <button class="button submit-button__button" type="submit">Отправить</button>
-            </div>
-            <button class="close-button" data-modal-close>
-                <svg class="close-button__icon" width="18" height="18">
+                </label> 
+                <button class="button button--active" type="submit">Отправить</button>
+            </form>
+            <button class="modal__button-close" data-modal-close>
+                <svg class="modal__button-close-icon" width="18" height="18">
                     <use href="./images/studio/icons.svg#icon-close"></use>
                 </svg>
             </button>
-        </form>
+        </div>
     </div>
     <script src="./js/modal.js"></script>
 </body>

@@ -16,6 +16,15 @@
   border: var(--accent-color);
 }
 
+.button--active {
+  transition: background-color var(--animation);
+
+  &:hover,
+  &:focus {
+    background-color: var(--second-accent-color);
+  }
+}
+
 .button__icon {
   margin-left: 10px;
   vertical-align: middle;

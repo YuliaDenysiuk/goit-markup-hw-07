@@ -15,20 +15,20 @@
   border-radius: 4px;
 
   transition: color var(--animation);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .clients__icon {
   fill: currentColor;
 
   transition: fill var(--animation);
-}
 
-.clients__link:hover,
-.clients__link:focus {
-  color: var(--accent-color);
-}
-
-.clients__link:hover .clients__icon,
-.clients__link:focus .clients__icon {
-  fill: currentColor;
+  .clients__link:hover &,
+  .clients__link:focus & {
+    fill: currentColor;
+  }
 }
